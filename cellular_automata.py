@@ -35,7 +35,7 @@ class Grid:
         sys.stdout.write("\033[H")
         for row in self.grid:
             for cell in row:
-                sys.stdout.write(f"\033[1;37m{cell.state}\033[0m " if cell.state == 1 else f"\033[1;30m{cell.state}\033[0m ")
+                sys.stdout.write(f"\033[1;37m{'*'}\033[0m " if cell.state == 1 else f"\033[1;30m{'.'}\033[0m ")
             sys.stdout.write("\n")
         sys.stdout.flush()
         time.sleep(0.5)
